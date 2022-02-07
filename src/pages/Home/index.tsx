@@ -34,17 +34,13 @@ function Home() {
     console.log(imageSources[0]);
   }
 
-  useEffect(() => {
-    getNewImages()
-  },[])
 
   function compareScores(side: string, total: number) {
+    var tempScores = scores;
     if(side === 'left') {
-      var tempScores = scores;
       tempScores[0] = total;
       setScores(tempScores);
     } else {
-      var tempScores = scores;
       tempScores[1] = total;
       setScores(tempScores);
     }
